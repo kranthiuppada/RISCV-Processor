@@ -121,3 +121,20 @@ RegWrite = 1
 ## 📜 Conclusion
 
 The simulation results and waveform verification confirm that the RISC-V processor is functioning correctly, executing instructions as expected with proper register and memory updates.
+
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE). 
+
+---
+## 👩‍💻 Author
+
+**Kranthi Uppada**  
+B.Tech ECE | Digital Design Enthusiast  
+[GitHub Profile](https://github.com/kranthiuppada)
+
+
+---
+
