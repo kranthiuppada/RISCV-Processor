@@ -68,7 +68,53 @@ The `RISCV_TB.v` testbench includes:
 ## 📷 Simulation Output  
 
 **Waveform (GTKWave):**  
-*(Insert your screenshot here)*  
+*![Image](https://github.com/user-attachments/assets/5f98194e-39f7-4b2f-a612-0b7168e4251a)*
+
+
+**✅ Waveform Verification**
+
+To ensure the RISC-V processor is working correctly, I verified the execution of instructions step by step from the simulation waveform.
+
+Example 1: PC = 0x18
+
+Instruction: 0x00519233 → Decodes to ADD x4, x3, x10
+
+Inputs from waveform:
+
+x3 = 0x28 (40)
+
+x10 = 0x41 (65)
+
+Expected ALU result: 40 + 65 = 105 (0x69)
+
+Waveform result:
+
+WB_data = 0x69
+
+RegWrite = 1
+
+✅ Correct execution (x4 updated to 0x69).
+
+Example 2: PC = 0x1C
+
+Instruction: 0x019806B3 → Decodes to ADD x13, x0, x25
+
+Inputs from waveform:
+
+x0 = 0x0
+
+x25 = 0xFFFFFFF6 (-10)
+
+Expected ALU result: 0 + (-10) = -10 (0xFFFFFFF6)
+
+Waveform result:
+
+WB_data = 0xFFFFFFF6
+
+RegWrite = 1
+
+✅ Correct execution (x13 updated to -10).
+ 
 
 ---  
 
